@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 212 12% 95%;
+    --foreground: 212 5% 0%;
+    --card: 212 12% 90%;
+    --card-foreground: 212 5% 10%;
+    --popover: 212 12% 95%;
+    --popover-foreground: 212 95% 0%;
+    --primary: 212 100% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 212 12% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 174 12% 85%;
+    --muted-foreground: 212 5% 35%;
+    --accent: 174 12% 80%;
+    --accent-foreground: 212 5% 10%;
+    --destructive: 0 50% 30%;
+    --destructive-foreground: 212 5% 90%;
+    --border: 212 20% 50%;
+    --input: 212 20% 18%;
+    --ring: 212 100% 38%;
+    --radius: 1rem;
+   }
+  .dark {
+    --background: 212 12% 5%;
+    --foreground: 212 5% 90%;
+    --card: 212 12% 0%;
+    --card-foreground: 212 5% 90%;
+    --popover: 212 12% 5%;
+    --popover-foreground: 212 5% 90%;
+    --primary: 212 100% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 212 12% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 174 12% 15%;
+    --muted-foreground: 212 5% 60%;
+    --accent: 174 12% 15%;
+    --accent-foreground: 212 5% 90%;
+    --destructive: 0 50% 30%;
+    --destructive-foreground: 212 5% 90%;
+    --border: 212 20% 18%;
+    --input: 212 20% 18%;
+    --ring: 212 100% 38%;
+    --radius: 1rem;
+   }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.wave {
+  animation-name: wave-animation;  /* Name of @keyframes element below */
+  animation-duration: 1.2s;  /* Wave speed */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  transform-origin: 70% 70%;  /* Pivot from bottom-left palm */
+  display: inline-block;
+  font-size: 1.6rem;
+}
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+100% { transform: rotate( 0.0deg) }
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
