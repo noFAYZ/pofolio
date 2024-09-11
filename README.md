@@ -1,4 +1,4 @@
-## Le T2 Template
+## Personal Portfolio using Next.js, Shad/cn UI NextUI Sanity
 
 ```bash
 yarn dev
