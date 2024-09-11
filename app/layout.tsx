@@ -3,20 +3,22 @@ import "@/styles/globals.css";
 import { Nav } from "@/components/Nav";
 import { Providers } from "./providers";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import { IconBrandDocker, IconUser } from "@tabler/icons-react";
+import { IconBrandDocker, IconBrandFacebook, IconUser } from "@tabler/icons-react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import Meteors from "@/components/magicui/meteors";
 import FlickeringGrid from "@/components/magicui/flickering-grid";
 import { cn } from "@/lib/utils";
+import { OcticonLogoGithub16 } from "@/components/icons/skill-icons";
+import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 
 const navItems = [{
-  title: "About",
-  href: '#about',
-  icon: <IconUser />,
+  title: "Github Profile",
+  href: '#github',
+  icon: <GitHubLogoIcon height={25} width={25} />,
 },{
-  title: "Skills",
-  href: '#skills',
-  icon: <IconBrandDocker />,
+  title: "Instagram",
+  href: '#insta',
+  icon: <InstagramLogoIcon height={25} width={25}/>,
 }]
 
 // Updated DotPattern component
@@ -49,7 +51,7 @@ export default function RootLayout({
       <body>
         <Providers>
           <div className="relative flex min-h-screen w-full items-center justify-center bg-background overflow-hidden">
-            <FloatingDock items={navItems} />
+            <FloatingDock items={navItems} desktopClassName="z-10" />
             <Nav />
             {children}
             <Meteors number={10} />

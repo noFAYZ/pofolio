@@ -2,7 +2,8 @@ import {defineQuery} from 'next-sanity'
 import { client } from './client';
 
 export const POSTS_QUERY = defineQuery(`*[_type == "post" && defined(slug.current)][0...12]{
-  _id, title, slug, mainImage
+  _id, title, slug, mainImage,publishedAt,
+  "excerpt": array::join(string::split((pt::text(body)), "")[0..255], "") + "..."
 }`)
 
 export const POST_QUERY = defineQuery(` *[_type == "post" && slug.current == $slug][0]{

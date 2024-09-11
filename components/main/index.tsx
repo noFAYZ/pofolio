@@ -2,6 +2,7 @@
 import { Button, Chip } from "@nextui-org/react";
 import { IconUserCircle } from "@tabler/icons-react";
 import toast from "react-hot-toast";
+import Articles from "../blocks/articles";
 import ExpandableCardDemo from "../blocks/expandable-card-demo-standard";
 import { DeviconNextjs, DeviconRust, DeviconSolidity, SkillIconsAwsDark, SkillIconsGcpDark, SkillIconsNextjsDark, SkillIconsRust, SkillIconsSolidity } from "../icons/skill-icons";
 import { AnimatedList, AnimatedListItem } from "../magicui/animated-list";
@@ -158,7 +159,7 @@ export const MainPage = () => {
       </div>
       <Skills />
       <div>
-        <ExpandableCardDemo />
+        <Articles limit={2} />
       </div>
    
     </div>
