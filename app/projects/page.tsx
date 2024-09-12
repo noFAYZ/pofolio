@@ -1,13 +1,13 @@
 "use client";
 import React from 'react'
+import SplitViewShowcase from './components/bento';
 import { CardHoverEffectDemo } from './components/grid'
 import { TimelineDemo } from './components/timeline'
 
 const page = () => {
   return (
     <div>
-      <CardHoverEffectDemo />
-        <TimelineDemo />
+              <SplitViewShowcase />
     </div>
   )
 }
