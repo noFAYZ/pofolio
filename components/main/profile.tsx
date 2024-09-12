@@ -1,5 +1,6 @@
 import { Avatar, Button } from '@nextui-org/react'
 import { GitHubLogoIcon, LaptopIcon } from '@radix-ui/react-icons'
+import Link from 'next/link'
 import React from 'react'
 import { FxemojiAlien, HugeiconsBackpack03, HugeiconsLinkSquare01, OcticonLogoGithub16, SolarPhoneRoundedBold, StreamlineSendEmailSolid } from '../icons/skill-icons'
 import { GradualSpacing } from '../ui/gradual-spacing'
@@ -45,12 +46,13 @@ const profile = () => {
             color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
             borderRadius={100}
           >
+            <Link href='/about'>
             <Button className='m-0 px-6 py-2 bg-transparent rounded-full w-full' variant='flat'>
               <span className='flex justify-center gap-2 items-center font-semibold capitalize'>
                 <FxemojiAlien className="h-5 w-5" />
                 About me
               </span>
-            </Button>
+            </Button></Link>
           </ShineBorder>
     
           <Button
