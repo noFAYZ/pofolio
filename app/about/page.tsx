@@ -5,54 +5,55 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Award, Briefcase, ChevronRight, Code, Coffee, Cpu, Eye, Globe, Layers, MessageCircle, Palette, Smartphone, Users, Zap } from 'lucide-react';
+import { IconCurrencyBitcoin, IconCurrencyEthereum } from '@tabler/icons-react';
 
 const stats = [
-  { value: "8+", label: "Years of Experience" },
-  { value: "1k+", label: "Completed Projects" },
-  { value: "90+", label: "Client Satisfactions" },
-  { value: "20+", label: "Design Awards" },
+  { value: "3+", label: "Years of Experience" },
+  { value: "45+", label: "Blockchain Projects" },
+  { value: "95%", label: "Client Satisfaction" },
+  { value: "10+", label: "NFT Collections/Tokens Launched" },
 ];
 
 const experiences = [
   {
-    period: "2020 - Present",
-    company: "BloomHub Technology",
-    role: "Application Developer",
-    description: "As a product designer at a leading e-commerce company, I was responsible for designing user interfaces for the company's online shopping platform. I collaborated closely with the company's marketing and development teams to create designs that not only looked great but also drove conversions and increased sales."
+    period: "2021 - Present",
+    company: "CryptoInnovate",
+    role: "Senior Blockchain Developer",
+    description: "Leading development of decentralized applications (dApps) and smart contracts on Ethereum and Solana. Implemented advanced tokenomics for various projects and optimized gas efficiency for EVM-compatible chains."
   },
   {
-    period: "2018 - 2020",
-    company: "Skyward Company Limited",
-    role: "Product Designer",
-    description: "At a software startup, I worked as a product designer on a team that was responsible for developing a new mobile app. I was responsible for creating wireframes, designing user interfaces, and conducting user testing to ensure that the app was intuitive and user-friendly. My work helped the company launch a successful app that received positive feedback from users."
+    period: "2022 - Present",
+    company: "NFT Realm",
+    role: "NFT Technical Consultant",
+    description: "Provided technical expertise for launching and maintaining multiple successful NFT collections. Developed smart contracts for minting, royalties, and marketplace integration on both EVM and Solana chains."
   },
   {
-    period: "2015 - 2018",
-    company: "Atlas Innovations",
-    role: "Senior Developer",
-    description: "As a freelance product designer, I worked with a variety of clients across different industries. I designed packaging for a new food product, created marketing materials for a fashion brand, and developed user interfaces for a healthcare startup. My ability to adapt to different industries and design challenges made me a valuable asset to my clients."
+    period: "2021 - 2022",
+    company: "BlockChain Solutions Inc.",
+    role: "Fullstack Web3 Developer",
+    description: "Developed and deployed various DeFi protocols including yield farming and liquidity pools. Created user-friendly frontend interfaces for blockchain interactions using React and Web3.js."
   },
 ];
+
 const skills = [
-    { name: "Web Design", icon: <Code className="w-6 h-6" />, level: 95 },
-    { name: "UX/UI", icon: <Zap className="w-6 h-6" />, level: 90 },
-    { name: "Front-end Development", icon: <Cpu className="w-6 h-6" />, level: 85 },
-    { name: "Branding", icon: <Briefcase className="w-6 h-6" />, level: 88 },
-  ];
-  
-  const projects = [
-    { name: "E-commerce Redesign", description: "Revamped UI/UX for a major online retailer" },
-    { name: "AI-Powered Portfolio Generator", description: "Web app that creates portfolios using AI" },
-    { name: "Blockchain Visualizer", description: "Interactive tool for understanding blockchain technology" },
-    { name: "Responsive News Platform", description: "Mobile-first news site with real-time updates" },
-  ];
+  { name: "Solidity", icon: <IconCurrencyEthereum className="w-6 h-6" />, level: 95 },
+  { name: "Web3.js / Ethers.js", icon: <Code className="w-6 h-6" />, level: 90 },
+  { name: "React & Next.js", icon: <Zap className="w-6 h-6" />, level: 88 },
+  { name: "Solana (Rust)", icon: <IconCurrencyBitcoin className="w-6 h-6" />, level: 85 },
+];
 
+const projects = [
+  { name: "DeFi Yield Aggregator", description: "Smart contract system optimizing yields across multiple protocols" },
+  { name: "Cross-Chain NFT Bridge", description: "Enabling NFT transfers between Ethereum and Solana" },
+  { name: "Decentralized Exchange (DEX)", description: "AMM-based DEX with liquidity mining rewards" },
+  { name: "DAO Governance Platform", description: "On-chain voting and proposal system for decentralized organizations" },
+];
 
-  const services = [
-    { name: "Brand Identity Design", description: "Create a unique and memorable brand identity that resonates with your target audience.", icon: <Palette className="w-8 h-8 mb-4 text-purple-400" /> },
-    { name: "Website Design", description: "Design beautiful, responsive websites that provide an exceptional user experience.", icon: <Globe className="w-8 h-8 mb-4 text-blue-400" /> },
-    { name: "Application Design", description: "Craft intuitive and engaging user interfaces for mobile and web applications.", icon: <Smartphone className="w-8 h-8 mb-4 text-green-400" /> },
-  ];
+const services = [
+  { name: "Smart Contract Development", description: "Design and implement secure, efficient smart contracts for various blockchain use cases.", icon: <Code className="w-8 h-8 mb-4 text-purple-400" /> },
+  { name: "NFT Collection Launch", description: "End-to-end technical solution for creating and launching successful NFT projects.", icon: <Palette className="w-8 h-8 mb-4 text-blue-400" /> },
+  { name: "DApp Frontend Development", description: "Create intuitive and responsive user interfaces for decentralized applications.", icon: <Smartphone className="w-8 h-8 mb-4 text-green-400" /> },
+];
   
   const StatCard = ({ stat, icon }) => (
     <motion.div 

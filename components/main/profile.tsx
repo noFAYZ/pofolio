@@ -55,8 +55,11 @@ const profile = () => {
             </Button></Link>
           </ShineBorder>
     
+          <Link href='https://github.com/nofayz' target={'_blank'}>
           <Button
           variant='faded' className='rounded-full w-full'  endContent={<HugeiconsLinkSquare01 width={12} height={12}/>}> <OcticonLogoGithub16 width={40} height={40} /> </Button>
+</Link>
+
                 <Button 
             variant='faded' 
             startContent={<StreamlineSendEmailSolid className="h-5 w-5" />}

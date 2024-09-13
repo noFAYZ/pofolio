@@ -135,7 +135,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const isVideoBg= true;
+  const isVideoBg= false;
   const youtubeVideoId = "qoVHupBCTMY";
 
   return (
