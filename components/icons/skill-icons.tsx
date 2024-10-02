@@ -220,3 +220,22 @@ export function CarbonBlog(props: SVGProps<SVGSVGElement>) {
 	return (<svg xmlns="http://www.w3.org/2000/svg" width={props.width || "1rem"}
   height={props.height || "1rem"} viewBox="0 0 32 32" {...props}><path fill="currentColor" d="M4 24h10v2H4zm0-6h10v2H4zm22-4H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M6 6v6h20V6zm20 22h-6a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2m-6-8v6h6v-6z"></path></svg>);
 }
+
+
+
+export function ArcticonsIntelligentCv(props) {
+	return (<svg xmlns="http://www.w3.org/2000/svg" width={props.width || "1rem"}
+    height={props.height || "1rem"} viewBox="0 0 48 48" {...props}><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M17.719 40.313h-2.2v-4.4h2.2m-2.2 2.2h1.434m20.248 2.2H35v-4.4h2.2m-2.2 2.2h1.434m-24.193.756l1.44 1.443m-2.88.001v-4.4h1.44c.814 0 1.474.662 1.474 1.478s-.66 1.478-1.474 1.478h-1.44m13.278-2.956v2.943a1.458 1.458 0 1 0 2.915 0v-2.943M19.45 39.83c.27.352.608.482 1.079.482h.65c.607 0 1.099-.491 1.099-1.097v-.005c0-.606-.492-1.098-1.098-1.098h-.72a1.1 1.1 0 0 1-1.097-1.099h0a1.1 1.1 0 0 1 1.099-1.101h.65c.47 0 .809.13 1.079.482m6.605 3.914v-4.396l2.2 4.4l2.201-4.394v4.394m-20.983-8.73h7.836m-7.836-3.405h7.836m-7.836-3.404h7.836m2.492 4.87h13.07m-13.07-4h13.07m-13.07-4h13.07m-13.07-4h13.07m-13.07-4h13.07m-23.4-1.383h7.837v9.444h-7.836zM9.747 32.848V9.873h28.51v22.975m4.273-.726c-4.99 1.046-11.627 1.63-18.529 1.63s-13.538-.584-18.53-1.63M9.5 5.5h29c2.217 0 4 1.784 4 4v29c0 2.216-1.783 4-4 4h-29c-2.215 0-4-1.784-4-4v-29c0-2.216 1.785-4 4-4"></path></svg>);
+}
+
+
+export function PhReadCvLogoDuotone(props) {
+	return (<svg xmlns="http://www.w3.org/2000/svg" width={props.width || "1rem"}
+    height={props.height || "1rem"} viewBox="0 0 256 256" {...props}><g fill="currentColor"><path d="m215.88 56.39l-29.75 169a8 8 0 0 1-9.27 6.49l-130.25-23a8 8 0 0 1-6.49-9.26l29.75-169a8 8 0 0 1 9.27-6.49l130.25 23a8 8 0 0 1 6.49 9.26" opacity={0.2}></path><path d="m210.78 39.25l-130.25-23A16 16 0 0 0 62 29.23l-29.75 169a16 16 0 0 0 13 18.53l130.25 23a16 16 0 0 0 18.54-13l29.75-169a16 16 0 0 0-13.01-18.51M178.26 224L48 201L77.75 32L208 55ZM89.34 58.42a8 8 0 0 1 9.27-6.48l83 14.65a8 8 0 0 1-1.39 15.88a8.4 8.4 0 0 1-1.4-.12l-83-14.66a8 8 0 0 1-6.48-9.27M83.8 89.94a8 8 0 0 1 9.27-6.49l83 14.66a8 8 0 0 1-1.4 15.89a7.6 7.6 0 0 1-1.41-.13l-83-14.65a8 8 0 0 1-6.46-9.28m-5.55 31.51a8 8 0 0 1 9.27-6.45l41.48 7.29a8 8 0 0 1-1.38 15.88a8.3 8.3 0 0 1-1.4-.12l-41.5-7.33a8 8 0 0 1-6.47-9.27"></path></g></svg>);
+}
+
+
+export function SystemUiconsCloudDownload(props) {
+	return (<svg xmlns="http://www.w3.org/2000/svg" width={props.width || "1rem"}
+    height={props.height || "1rem"} viewBox="0 0 21 21" {...props}><g fill="none" fillRule="evenodd" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><path d="M10.5 5.5a5 5 0 0 1 4.802 6.399A2 2 0 1 1 16.5 15.5h-11a3 3 0 1 1 .1-5.998A5 5 0 0 1 10.5 5.5"></path><path d="m12.5 11.5l-2 2l-2-2m2-4v6"></path></g></svg>);
+}

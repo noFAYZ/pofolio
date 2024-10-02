@@ -2,11 +2,15 @@ import { Avatar, Button } from '@nextui-org/react'
 import { GitHubLogoIcon, LaptopIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import React from 'react'
-import { FxemojiAlien, HugeiconsBackpack03, HugeiconsLinkSquare01, OcticonLogoGithub16, SolarPhoneRoundedBold, StreamlineSendEmailSolid } from '../icons/skill-icons'
+import { ArcticonsIntelligentCv, FxemojiAlien, HugeiconsBackpack03, HugeiconsLinkSquare01, OcticonLogoGithub16, PhReadCvLogoDuotone, SolarPhoneRoundedBold, StreamlineSendEmailSolid, SystemUiconsCloudDownload } from '../icons/skill-icons'
 import { GradualSpacing } from '../ui/gradual-spacing'
 import { PulsatingButton } from '../ui/pulsating-Button'
 import { ShineBorder } from '../ui/shine-border'
 import {ShinyButton}  from '../ui/shiny-button'
+
+const downloadResume = () => {
+  window.open('/profile/resume.pdf', '_blank')
+}
 
 const profile = () => {
   return (
@@ -63,9 +67,20 @@ const profile = () => {
                 <Button 
             variant='faded' 
             startContent={<StreamlineSendEmailSolid className="h-5 w-5" />}
+            
             className="rounded-full text-sm w-full sm:w-auto"
           >
           
+          </Button>
+          <Button 
+          isIconOnly
+            variant='faded' 
+            className="rounded-full text-sm w-full sm:w-auto flex gap-2 px-2"
+           onClick={downloadResume}
+          >
+            Resume
+            <SystemUiconsCloudDownload className="h-7 w-7 pl-1" />
+      
           </Button>
         </div>
       </div>
