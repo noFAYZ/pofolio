@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -5,13 +6,14 @@ import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CodeIcon, LaptopIcon } from '@radix-ui/react-icons';
-import { IconBriefcase, IconMail, IconUser } from '@tabler/icons-react';
+import { IconBriefcase, IconMail, IconSmartHome, IconUser } from '@tabler/icons-react';
 import { ModeToggle } from './ModeToggle';
 import { CarbonBlog } from './icons/skill-icons';
+import { HomeIcon } from '@sanity/icons';
 
 
 const navItems = [
-  { name: 'Home', href: '/', icon: LaptopIcon },
+  { name: 'Home', href: '/', icon: IconSmartHome },
   { name: 'Projects', href: '/projects', icon: CodeIcon },
   { name: 'Blog', href: '/blog', icon: CarbonBlog },
   { name: 'About', href: '/about', icon: IconUser },
@@ -23,7 +25,7 @@ export function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-12 left-1/2 transform -translate-x-1/2 z-40">
+    <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 z-40">
       <div className="bg-white backdrop-blur-md rounded-full border border-border px-2 py-2 shadow-lg">
         <ul className="flex space-x-1">
           {navItems.map((item) => (
@@ -65,7 +67,7 @@ function NavItem({ item, isActive }) {
           className="flex items-center gap-2"
           whileTap={{ scale: 0.95 }}
         >
-          <Icon className="w-4 h-4" />
+          <Icon className="w-5 h-5" />
           <span className="hidden sm:inline">{item.name}</span>
         </motion.span>
       </Button>

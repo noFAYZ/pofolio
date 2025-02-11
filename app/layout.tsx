@@ -144,15 +144,11 @@ export default function RootLayout({
         <Providers>
           <div className="relative flex min-h-screen w-full items-center justify-center bg-background overflow-hidden">
        
-            <FloatingDock items={navItems} desktopClassName="z-10" />
+           
             <Nav />
             {children}
-            {isVideoBg ? <>   <YouTubeBackground videoId={youtubeVideoId} /></> : <>  <Meteors number={10} />
-            <DotPattern
-              className={cn(
-                "text-neutral-400/80 [mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
-              )}
-            /></>
+            {isVideoBg ? <>   <YouTubeBackground videoId={youtubeVideoId} /></> : <> 
+          </>
 
             }
           
