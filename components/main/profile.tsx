@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 "use client";
+=======
+
+import { Avatar, Button } from '@nextui-org/react'
+import { EnvelopeClosedIcon, GitHubLogoIcon, LaptopIcon, PersonIcon } from '@radix-ui/react-icons'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { ArcticonsIntelligentCv, FxemojiAlien, HugeiconsBackpack03, HugeiconsLinkSquare01, OcticonLogoGithub16, PhReadCvLogoDuotone, SolarPhoneRoundedBold, StreamlineSendEmailSolid, SystemUiconsCloudDownload } from '../icons/skill-icons'
+import  GradualSpacing  from '../ui/gradual-spacing'
+import { PulsatingButton } from '../ui/pulsating-Button'
+import { ShineBorder } from '../ui/shine-border'
+import {ShinyButton}  from '../ui/shiny-button'
+import { ArrowUpRight, Download, DownloadIcon, ExternalLink, Github, Mail, MessageSquare, Star, User2 } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { EnvelopeIcon } from '@sanity/icons'
+import { cn } from '@/lib/utils'
+>>>>>>> 7d7e71a4b9845189021b76949a2893667fa7c18b
 
 import { useState, useEffect } from 'react';
 import { Avatar, Button } from '@nextui-org/react';
