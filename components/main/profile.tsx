@@ -46,8 +46,8 @@ const Profile = () => {
       >
         <motion.div className="flex flex-col items-center sm:items-start gap-2" variants={item}>
           <div className="relative">
-            <span className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400">
-              Hi <span className="inline-block animate-bounce">👋</span> I'm
+            <span className="text-base sm:text-lg md:text-xl ">
+              Hi <span className="inline-block animate-appearance-in">👋</span> I'm
             </span>
           </div>
           
@@ -75,11 +75,12 @@ const Profile = () => {
         >
           <Link href='/about' className="group">
             <Button 
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 text-md font-medium"
+              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 text-md font-medium "
               startContent={<FaUserAstronaut className="w-4 h-4" />}
               endContent={<HiExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />}
-              radius="full"
-              size="lg"
+              radius="lg"
+              
+              size="md"
             >
               About me
             </Button>
@@ -87,30 +88,30 @@ const Profile = () => {
           
           <Link href='https://github.com/nofayz' target='_blank'>
             <Button 
-              className="bg-black/5 dark:bg-white/5 backdrop-blur-sm hover:bg-black/10 dark:hover:bg-white/10 text-black dark:text-white shadow-sm border border-black/10 dark:border-white/10"
+              className="bg-card backdrop-blur-sm "
               isIconOnly
-              radius="full"
-              size="lg"
+              radius="lg"
+              size="md"
             >
               <FaGithub className="w-5 h-5" />
             </Button>
           </Link>
           
           <Button 
-            className="bg-black/5 dark:bg-white/5 backdrop-blur-sm hover:bg-black/10 dark:hover:bg-white/10 text-black dark:text-white shadow-sm border border-black/10 dark:border-white/10"
+            className="bg-card backdrop-blur-sm "
             isIconOnly
-            radius="full"
-            size="lg"
+            radius="lg"
+            size="md"
           >
             <FaEnvelope className="w-5 h-5" />
           </Button>
           
           <Button 
-            className="bg-black/5 dark:bg-white/5 backdrop-blur-sm hover:bg-black/10 dark:hover:bg-white/10 text-black dark:text-white shadow-sm border border-black/10 dark:border-white/10 group"
+            className="bg-card backdrop-blur-sm group"
             onClick={downloadResume}
             endContent={<FaFileDownload className="w-4 h-4 group-hover:translate-y-1 transition-transform" />}
-            radius="full"
-            size="lg"
+            radius="lg"
+            size="md"
           >
             Resume
           </Button>
@@ -126,7 +127,7 @@ const Profile = () => {
           className="relative">
           <Avatar 
             isBordered 
-            color="warning"
+     
             src="/profile/3.jpeg" 
             className="w-48 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-96   "
           />

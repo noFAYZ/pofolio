@@ -4,49 +4,410 @@
 
 @layer base {
   :root {
-    --background: 212 12% 95%;
-    --foreground: 212 5% 0%;
-    --card: 212 12% 90%;
-    --card-foreground: 212 5% 10%;
-    --popover: 212 12% 95%;
-    --popover-foreground: 212 95% 0%;
-    --primary: 212 100% 38%;
+    /* Main Colors */
+    --page-bg: 240 5% 96%;
+    --background: 210 18.18% 95.69%;
+    --foreground: 240 10% 3.9%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    /* Brand Colors */
+    --primary: 24 90% 55%; /* Orange 500 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 212 12% 70%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 174 12% 85%;
-    --muted-foreground: 212 5% 35%;
-    --accent: 174 12% 80%;
-    --accent-foreground: 212 5% 10%;
-    --destructive: 0 50% 30%;
-    --destructive-foreground: 212 5% 90%;
-    --border: 212 20% 50%;
-    --input: 212 20% 18%;
-    --ring: 212 100% 38%;
+    
+    /* Secondary Colors */
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 240 6% 10%;
+    
+    /* Neutral Colors */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    
+    /* Accent Colors */
+    --accent: 24 90% 97%;
+    --accent-foreground: 24 90% 55%;
+    
+    /* Feedback Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 72% 29%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 198 93% 60%;
+    --info-foreground: 0 0% 100%;
+
+    /* Gradient Colors */
+    --gradient-orange: 24 90% 55%;  /* #f97316 */
+    --gradient-pink: 336 85% 58%;   /* #ec4899 */
+    --gradient-purple: 288 96% 67%;  /* #db2777 */
+    
+    /* Border & Input */
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 24 90% 55%;
+
+    /* Radius */
     --radius: 1rem;
-   }
+    --radius-sm: 0.75rem;
+    --radius-lg: 1.25rem;
+    --radius-full: 9999px;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
   .dark {
-    --background: 212 12% 5%;
-    --foreground: 212 5% 90%;
-    --card: 212 12% 0%;
-    --card-foreground: 212 5% 90%;
-    --popover: 212 12% 5%;
-    --popover-foreground: 212 5% 90%;
-    --primary: 212 100% 38%;
+    /* Main Colors - Claude-inspired charcoal with subtle undertones */
+    --page-bg: 220 3% 9%; /* Deep charcoal for background */
+    --background:  60 2.7% 14.51%; /* Consistent with page background */
+    --foreground: 210 5% 96%; /* Slightly off-white for reduced eye strain */
+  
+    /* Surface Colors - Slightly elevated */
+    --card: 60 2.13% 18.43%; /* Subtly lighter than background */
+    --card-foreground: 210 5% 96%;
+    --popover: 220 3% 11%;
+    --popover-foreground: 210 5% 96%;
+  
+    /* Brand Colors - Keeping original orange */
+    --primary: 24 90% 55%; /* Retained orange as the primary brand color */
     --primary-foreground: 0 0% 100%;
-    --secondary: 212 12% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 174 12% 15%;
-    --muted-foreground: 212 5% 60%;
-    --accent: 174 12% 15%;
-    --accent-foreground: 212 5% 90%;
-    --destructive: 0 50% 30%;
-    --destructive-foreground: 212 5% 90%;
-    --border: 212 20% 18%;
-    --input: 212 20% 18%;
-    --ring: 212 100% 38%;
-    --radius: 1rem;
-   }
+  
+    /* Secondary Colors - Complementary to orange primary */
+    --secondary: 24 15% 20%; /* Desaturated orange for secondary elements */
+    --secondary-foreground: 210 5% 96%;
+  
+    /* Neutral Colors */
+    --muted: 220 5% 15%; /* Muted background */
+    --muted-foreground: 220 10% 65%; /* Legible muted text */
+  
+    /* Accent Colors - Keeping original orange accent */
+    --accent: 24 80% 20%; /* Complementary accent orange */
+    --accent-foreground: 24 90% 55%;
+  
+    /* Feedback Colors - Clear and accessible */
+    --destructive: 0 75% 50%; /* Clear red for destructive actions */
+    --destructive-foreground: 0 0% 100%;
+    --success: 140 70% 35%; /* Slightly darker green for balance */
+    --success-foreground: 0 0% 100%;
+    --warning: 40 90% 55%; /* Brighter yellow for visibility */
+    --warning-foreground: 0 0% 100%;
+    --info: 200 90% 65%; /* Brighter blue for clarity */
+    --info-foreground: 0 0% 100%;
+  
+    /* Border & Input */
+    --border: 43.33 2.39% 25.8%; /* Subtle borders that don't distract */
+    --input: 220 5% 16%; /* Input background */
+    --ring: 24 90% 55%; /* Consistent with primary orange */
+    
+    /* Chart Colors - Original set */
+    --chart-1: 24 90% 60%; /* Primary orange chart color */
+    --chart-2: 220 70% 55%; /* Cooler blue */
+    --chart-3: 160 60% 50%; /* Green */
+    --chart-4: 30 80% 60%; /* Yellow */
+    --chart-5: 340 75% 60%; /* Magenta */
+  
+    /* Radius */
+    --radius: 0.5rem;
+  }
+
+
+  /* Modern Color Themes - Light Mode */
+[data-theme-color="blue"] {
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 221.2 83.2% 53.3%;
+}
+
+[data-theme-color="ocean"] {
+  --primary: 199 89% 48%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 199 89% 48%;
+}
+
+[data-theme-color="midnight"] {
+  --primary: 242 47.4% 34.3%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 242 47.4% 34.3%;
+}
+
+[data-theme-color="emerald"] {
+  --primary: 160 84% 39%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 160 84% 39%;
+}
+
+[data-theme-color="mint"] {
+  --primary: 156 71% 68.8%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 156 71% 68.8%;
+}
+
+[data-theme-color="sage"] {
+  --primary: 82 71% 44%;
+  --primary-foreground: 0 0% 100%;
+  --ring: 82 71% 44%;
+}
+
+[data-theme-color="violet"] {
+  --primary: 262.1 83.3% 57.8%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 262.1 83.3% 57.8%;
+}
+
+[data-theme-color="indigo"] {
+  --primary: 245.4 85.1% 58.8%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 245.4 85.1% 58.8%;
+}
+
+[data-theme-color="plum"] {
+  --primary: 292.2 84.1% 60.6%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 292.2 84.1% 60.6%;
+}
+
+[data-theme-color="amber"] {
+  --primary: 38 92% 50%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 38 92% 50%;
+}
+
+[data-theme-color="coral"] {
+  --primary: 24.6 95% 53.1%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 24.6 95% 53.1%;
+}
+
+[data-theme-color="crimson"] {
+  --primary: 0 91.2% 50.6%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 0 91.2% 50.6%;
+}
+
+[data-theme-color="crimson"] {
+  --primary: 0 24 90% 55%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 0 91.2% 50.6%;
+}
+
+[data-theme-color="slate"] {
+  --primary: 215.3 25% 46.9%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 215.3 25% 46.9%;
+}
+
+[data-theme-color="graphite"] {
+  --primary: 215.4 25% 26.7%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 215.4 25% 26.7%;
+}
+
+[data-theme-color="sunset"] {
+  --primary: 346.8 77.2% 49.8%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 346.8 77.2% 49.8%;
+}
+
+[data-theme-color="neon"] {
+  --primary: 188 95% 53%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 188 95% 53%;
+}
+
+/* Modern Color Themes - Dark Mode */
+[data-theme-color="blue"].dark {
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --ring: 224.3 76.3% 48%;
+}
+
+[data-theme-color="ocean"].dark {
+  --primary: 199 89% 55%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 199 89% 55%;
+}
+
+[data-theme-color="midnight"].dark {
+  --primary: 242 47.4% 55%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 242 47.4% 55%;
+}
+
+[data-theme-color="emerald"].dark {
+  --primary: 160 84% 45%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 160 84% 45%;
+}
+
+[data-theme-color="mint"].dark {
+  --primary: 156 71% 60%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 156 71% 60%;
+}
+
+[data-theme-color="sage"].dark {
+  --primary: 82 71% 52%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 82 71% 52%;
+}
+
+[data-theme-color="violet"].dark {
+  --primary: 263.4 70% 60.4%;
+  --primary-foreground: 210 40% 98%;
+  --ring: 263.4 70% 60.4%;
+}
+
+[data-theme-color="indigo"].dark {
+  --primary: 245.4 85.1% 68.8%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 245.4 85.1% 68.8%;
+}
+
+[data-theme-color="plum"].dark {
+  --primary: 292.2 84.1% 66.6%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 292.2 84.1% 66.6%;
+}
+
+[data-theme-color="amber"].dark {
+  --primary: 48 96% 58%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 48 96% 58%;
+}
+
+[data-theme-color="coral"].dark {
+  --primary: 24.6 95% 63.1%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 24.6 95% 63.1%;
+}
+
+[data-theme-color="crimson"].dark {
+  --primary: 0 91.2% 60.6%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 0 91.2% 60.6%;
+}
+
+[data-theme-color="slate"].dark {
+  --primary: 215.3 25% 66.9%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 215.3 25% 66.9%;
+}
+
+[data-theme-color="graphite"].dark {
+  --primary: 215.4 25% 66.7%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 215.4 25% 66.7%;
+}
+
+[data-theme-color="sunset"].dark {
+  --primary: 346.8 77.2% 59.8%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 346.8 77.2% 59.8%;
+}
+
+[data-theme-color="neon"].dark {
+  --primary: 188 95% 65%;
+  --primary-foreground: 0 0% 0%;
+  --ring: 188 95% 65%;
+}
+
+/* Border radius */
+[data-theme-radius="default"] {
+  --radius: 1rem;
+}
+
+[data-theme-radius="subtle"] {
+  --radius: 0.25rem;
+}
+
+[data-theme-radius="none"] {
+  --radius: 0;
+}
+
+[data-theme-radius="full"] {
+  --radius: 9999px;
+}
+
+/* Saturation */
+[data-theme-saturation="lower"] {
+  filter: saturate(1);
+}
+
+[data-theme-saturation="default"] {
+  filter: saturate(1);
+}
+
+[data-theme-saturation="higher"] {
+  filter: saturate(1.2);
+}
+
+/* Animation Styles */
+[data-theme-animation="subtle"] {
+  --animation-scale: 1.02;
+  --animation-duration: 0.3s;
+  --animation-transition: ease;
+}
+
+[data-theme-animation="bounce"] {
+  --animation-scale: 1.05;
+  --animation-duration: 0.4s;
+  --animation-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-theme-animation="none"] {
+  --animation-scale: 1;
+  --animation-duration: 0s;
+  --animation-transition: none;
+}
+
+[data-theme-animation="energetic"] {
+  --animation-scale: 1.07;
+  --animation-duration: 0.5s;
+  --animation-transition: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Apply animation variables to interactive elements */
+.animate-theme {
+  transition: transform var(--animation-duration) var(--animation-transition);
+}
+
+.animate-theme:hover {
+  transform: scale(var(--animation-scale));
+}
+
+/* Card transitions based on theme */
+[data-theme-animation="subtle"] .card-hover {
+  transition: all 0.3s ease;
+}
+
+[data-theme-animation="subtle"] .card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme-animation="bounce"] .card-hover {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-theme-animation="bounce"] .card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme-animation="energetic"] .card-hover {
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+[data-theme-animation="energetic"] .card-hover:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.25);
+}
 }
 
 @layer base {

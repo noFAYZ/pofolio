@@ -6,6 +6,9 @@ import Profile from "./profile";
 import Portfolio from "../ProjectCard";
 import Articles from "../blocks/articles";
 import { Skills } from "./skills";
+import ContactSection from "./contact";
+import Footer from "./footer";
+import CircleScrollIndicator from "./scroll-indicator";
 
 const ScrollIndicator = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -47,7 +50,7 @@ const ScrollIndicator = () => {
         opacity: { duration: 0.5 }
       }}
     >
-      <div className="flex flex-col items-center bg-gray-900/50 backdrop-blur-sm px-4 py-2 rounded-full">
+      <div className="flex flex-col items-center backdrop-blur-sm px-4 py-2 ">
         <p className="text-white/90 font-medium text-sm mb-1">Scroll Down</p>
         <ChevronDown className="w-5 h-5 text-orange-400" />
       </div>
@@ -65,7 +68,7 @@ export const MainPage = () => {
       >
         <Profile />
     
-        <ScrollIndicator />
+        <CircleScrollIndicator />
       </section>
 
       {/* Skills section 
@@ -133,6 +136,23 @@ export const MainPage = () => {
           <Articles limit={2} />
         </div>
       </motion.section>
+
+
+       {/* Articles section */}
+       <motion.section 
+        className="py-20 px-4 mb-20"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <div className="container mx-auto">
+  
+          <ContactSection  />
+        </div>
+      </motion.section>
+
+      <Footer />
     </div>
   );
 };
