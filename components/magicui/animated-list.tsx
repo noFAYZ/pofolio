@@ -11,7 +11,7 @@ export interface AnimatedListProps {
 }
 
 export const AnimatedList = React.memo(
-  ({ className, children, delay = 1000, itemsPerRow: propItemsPerRow = 8 }: AnimatedListProps) => {
+  ({ className, children, delay = 150, itemsPerRow: propItemsPerRow = 8 }: AnimatedListProps) => {
     const [displayedItems, setDisplayedItems] = useState<React.ReactNode[]>([]);
     const [itemsPerRow, setItemsPerRow] = useState(propItemsPerRow);
     const childrenArray = React.Children.toArray(children);
@@ -62,7 +62,7 @@ export const AnimatedList = React.memo(
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
             >
               {row.map((item, index) => (
                 <AnimatedListItem key={(item as ReactElement).key || `${rowIndex}-${index}`}>

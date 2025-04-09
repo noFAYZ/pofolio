@@ -239,3 +239,17 @@ export function SystemUiconsCloudDownload(props) {
 	return (<svg xmlns="http://www.w3.org/2000/svg" width={props.width || "1rem"}
     height={props.height || "1rem"} viewBox="0 0 21 21" {...props}><g fill="none" fillRule="evenodd" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><path d="M10.5 5.5a5 5 0 0 1 4.802 6.399A2 2 0 1 1 16.5 15.5h-11a3 3 0 1 1 .1-5.998A5 5 0 0 1 10.5 5.5"></path><path d="m12.5 11.5l-2 2l-2-2m2-4v6"></path></g></svg>);
 }
+
+
+
+export function RiNftFill(props) {
+	return (<svg xmlns="http://www.w3.org/2000/svg" width={props.width || "1rem"}
+    height={props.height || "1rem"} viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M9 12a2 2 0 1 0 0-4a2 2 0 0 0 0 4m3-11l9.5 5.5v11L12 23l-9.5-5.5v-11zM4.5 7.653v8.694l2.372 1.373l8.073-5.92l4.555 2.734v-6.88L12 3.31z"></path></svg>);
+}
+
+
+
+export function UnjsUncrypto(props) {
+	return (<svg xmlns="http://www.w3.org/2000/svg" width={props.width || "1rem"}
+    height={props.height || "1rem"} viewBox="0 0 32 32" {...props}><g fill="none"><path fill="#995aa8" d="M7.617 26.06h3.348v3.348H7.617zm13.393 0h3.348v3.348H21.01z"></path><path fill="#b574c3" d="M7.62 2.628h3.347v3.347H7.62zm13.39 0h3.348v3.347H21.01z"></path><path fill="url(#unjsUncrypto0)" d="M24.365 16.02V9.325H21.01v-3.35h-3.347v3.35h-3.348v-3.35h-3.347v3.35H7.62v6.695H4.272v3.348H7.62v3.35h3.347v3.345h3.348v-3.345h3.348v3.345h3.347v-3.345h3.355v-3.35h3.343V16.02zm-10.052 0h-3.348v-3.347h3.348zm6.695 0H17.66v-3.347h3.348z"></path><path fill="url(#unjsUncrypto1)" d="M27.705 9.323h3.35v6.7h-3.35z"></path><path fill="url(#unjsUncrypto2)" d="M.925 9.32h3.35v6.7H.925z"></path><defs><radialGradient id="unjsUncrypto0" cx={0} cy={0} r={1} gradientTransform="translate(16.086 2.35)scale(20.764)" gradientUnits="userSpaceOnUse"><stop offset={0.508} stopColor="#b574c3"></stop><stop offset={0.684} stopColor="#b070bf"></stop><stop offset={0.878} stopColor="#a363b2"></stop><stop offset={0.981} stopColor="#995aa8"></stop></radialGradient><radialGradient id="unjsUncrypto1" cx={0} cy={0} r={1} gradientTransform="matrix(16.3203 0 0 16.3202 15.78 6.029)" gradientUnits="userSpaceOnUse"><stop offset={0.508} stopColor="#b574c3"></stop><stop offset={0.684} stopColor="#b070bf"></stop><stop offset={0.878} stopColor="#a363b2"></stop><stop offset={0.981} stopColor="#995aa8"></stop></radialGradient><radialGradient id="unjsUncrypto2" cx={0} cy={0} r={1} gradientTransform="translate(15.703 3.27)scale(18.7725)" gradientUnits="userSpaceOnUse"><stop offset={0.508} stopColor="#b574c3"></stop><stop offset={0.684} stopColor="#b070bf"></stop><stop offset={0.878} stopColor="#a363b2"></stop><stop offset={0.981} stopColor="#995aa8"></stop></radialGradient></defs></g></svg>);
+}

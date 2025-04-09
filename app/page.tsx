@@ -1,9 +1,14 @@
 import { MainPage } from "@/components/main";
 
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: 'Faizan Asad - Portfolio',
+  description: '',
+}
 export default function Page() {
   return (
-    <div className="flex  md:px-80 px-4 items-center justify-center">
+    
       <MainPage />
-    </div>
+      
   );
 }
