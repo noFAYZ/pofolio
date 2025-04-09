@@ -1,20 +1,49 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { Avatar, Button } from '@nextui-org/react';
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Avatar } from "@/components/ui/avatar";
+import { 
+  Tooltip, 
+  TooltipContent, 
+  TooltipProvider, 
+  TooltipTrigger 
+} from "@/components/ui/tooltip";
+import { 
+  CodeIcon, 
+  LayersIcon, 
+  LaptopIcon, 
+  GlobeIcon, 
+  DownloadIcon 
+} from '@radix-ui/react-icons';
 import { FaGithub, FaEnvelope, FaFileDownload, FaUserAstronaut } from 'react-icons/fa';
 import { HiExternalLink } from 'react-icons/hi';
 import GradualSpacing  from '../ui/gradual-spacing';
-import Skills from './skills';
+import { OcticonLogoGithub16 } from '@/components/icons/skill-icons';
+import Link from 'next/link';
+import { Button } from '@nextui-org/react';
+import HandwrittenArrow from './HandWrittenArrow';
+import { DownloadCloudIcon } from 'lucide-react';
 
-const Profile = () => {
+
+export default function CreativeProfile() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+  const socialLinks = [
+    { 
+      icon: OcticonLogoGithub16, 
+      href: "https://github.com/nofayz",
+      label: "GitHub Profile" 
+    },
+    { 
+      icon: LaptopIcon, 
+      href: "/about", 
+      label: "About Me"
+    }
+  ];
 
   const downloadResume = () => {
     window.open('/profile/resume.pdf', '_blank');
@@ -37,7 +66,7 @@ const Profile = () => {
 
   return (
     <div className="flex flex-col sm:flex-row items-center justify-between w-[60rem]">
-      {/* Left side (Text) */}
+      {/* Profile Details */}
       <motion.div 
         className="flex flex-col items-center sm:items-start gap-6 sm:order-1 sm:w-1/2"
         initial="hidden"
@@ -75,8 +104,8 @@ const Profile = () => {
         >
           <Link href='/about' className="group">
             <Button 
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 text-md font-medium "
-              startContent={<FaUserAstronaut className="w-4 h-4" />}
+              className="bg-gradient-to-r from-orange-500 to-pink-600 text-white shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-100 text-md font-medium border"
+              startContent={<FaUserAstronaut className="w-5 h-5" />}
               endContent={<HiExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />}
               radius="lg"
               
@@ -109,7 +138,7 @@ const Profile = () => {
           <Button 
             className="bg-card backdrop-blur-sm group"
             onClick={downloadResume}
-            endContent={<FaFileDownload className="w-4 h-4 group-hover:translate-y-1 transition-transform" />}
+            endContent={<DownloadCloudIcon className="w-4 h-4 group-hover:translate-y-1 transition-transform" />}
             radius="lg"
             size="md"
           >
@@ -118,29 +147,43 @@ const Profile = () => {
         </motion.div>
       </motion.div>
 
-      {/* Right side (Avatar) */}
-      <div 
-        className="relative flex items-center justify-center sm:order-2 sm:w-1/2">
-     
-        
-        <div 
-          className="relative">
-          <Avatar 
-            isBordered 
-     
+      {/* Avatar with Service Arrows */}
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, type: "spring" }}
+        className="relative flex items-center justify-center"
+      >
+        <Avatar className="w-48 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-96 border-4 border-primary/50">
+          <img 
             src="/profile/3.jpeg" 
-            className="w-48 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-96   "
+            alt="Faizan Asad" 
+            className="object-cover rounded-full"
           />
-          
-         
-          
-  
-        </div>
-     
-      </div>
-     
+        </Avatar>
+
+        {/* Handwritten Service Arrows */}
+        <HandwrittenArrow 
+          direction="top" 
+          title="Web Dev" 
+        />
+        <HandwrittenArrow 
+          direction="right" 
+          title="Blockchain" 
+        />
+        <HandwrittenArrow 
+          direction="bottom" 
+          title="Consulting" 
+        />
+        <HandwrittenArrow 
+          direction="left" 
+          title="Web3" 
+        />
+      </motion.div>
+
+      
+
+
     </div>
   );
-};
-
-export default Profile;
+}
