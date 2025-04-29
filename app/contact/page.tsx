@@ -264,7 +264,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium">Location</h3>
-                    <p className="text-sm text-muted-foreground">New York, USA</p>
+                    <p className="text-sm text-muted-foreground">Hunza, Pakistan</p>
                   </div>
                 </motion.div>
               </div>
@@ -291,7 +291,7 @@ const ContactPage = () => {
                     onMouseLeave={() => setHoveredSocial(null)}
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.3, delay: 0.4 + (index * 0.1) }}
+                    transition={{ duration: 0.1 }}
                     whileHover={{ y: -5 }}
                   >
                     {/* Hover background */}
@@ -328,7 +328,7 @@ const ContactPage = () => {
                 <motion.div 
                   className="absolute inset-0 h-2.5 w-2.5 rounded-full bg-green-500"
                   animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                  transition={{ duration: 1, repeat: Infinity }}
                 />
               </div>
               <div>

@@ -68,8 +68,19 @@ export default function MinimalProfile() {
     >
 
         {/* Text content section */}
-        <div className="space-y-10 flex flex-col justify-center items-center">
+        <div className="space-y-8 flex flex-col justify-center items-center">  
+          
+          <motion.div
+              variants={itemVariants}
+              className="flex items-center  gap-3"
+            >
+              <Badge  className=" rounded-full bg-lime-400 text-lime-800 px-4 py-1 text-sm font-medium flex items-center gap-2 hover:bg-lime-300">
+                <span className="h-2 w-2 rounded-full bg-lime-800 animate-pulse"></span>
+                Open to work
+              </Badge>
+            </motion.div>
           <div className="space-y-4 flex flex-col justify-center items-center">
+        
             <motion.div 
               variants={itemVariants} 
               className="flex items-center gap-3"
@@ -125,33 +136,27 @@ export default function MinimalProfile() {
               </p>
             </motion.div>
             
-            <motion.div
-              variants={itemVariants}
-              className="flex items-center gap-3 mt-6"
-            >
-              <Badge  className="rounded-full bg-lime-400 text-lime-800 px-4 py-1 text-sm font-medium flex items-center gap-2 hover:bg-lime-300">
-                <span className="h-2 w-2 rounded-full bg-lime-800 animate-pulse"></span>
-                Open to work
-              </Badge>
-            </motion.div>
+    
           </div>
-          <div className="text-xl text-gray-300 dark:text-gray-300 max-w-2xl text-center space-y-4">
+          <div className="text-lg text-gray-300 dark:text-gray-300 max-w-2xl text-center space-y-4 bg-muted/60 py-6 px-4 rounded-[2rem] drop-shadow-md">
               <p>
                 I'm a <span className=" font-bold text-gray-400 dark:text-primary bg-white px-1 py-0.5 rounded-lg shadow-xl">Web3</span> specialist with 4+ years of experience building decentralized applications and smart contracts across multiple ecosystems. My expertise spans EVM-compatible chains (Ethereum, Polygon, Avalanche) and Solana, with a focus on creating secure, efficient solutions.
               </p>
               
               <p>
                 From DeFi protocols to NFT marketplaces/collections and DAO governance systems, I've architected blockchain projects that combine technical excellence with intuitive interfaces, bridging the gap between complex blockchain technology and everyday users.
-              </p>
-            </div>
-          
-          <motion.p 
+              </p> 
+              
+              <motion.p 
             variants={itemVariants}
-            className="text-xl text-gray-400 dark:text-gray-300 max-w-2xl text-pretty"
+            className=" text-gray-400 dark:text-gray-300 max-w-2xl text-center"
           >
             Feel free to explore my portfolio and reach out
             — I'd love to connect and discuss your next project!
           </motion.p>
+            </div>
+          
+         
           
           <motion.div 
             variants={itemVariants}
@@ -197,7 +202,7 @@ export default function MinimalProfile() {
         variants={itemVariants}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
+        transition={{ delay: 0.5 }}
         className="mt-16 text-sm text-gray-500 dark:text-gray-400 text-center"
       >
         * Currently specializing in Web3 development and decentralized applications
