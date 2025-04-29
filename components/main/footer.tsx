@@ -35,9 +35,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and copyright */}
           <div className="mb-6 md:mb-0">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="font-bold tracking-tight text-lg">YourName</span>
-            </Link>
+      
             <p className="text-xs text-muted-foreground mt-2">
               &copy; {year} All rights reserved
             </p>
