@@ -255,7 +255,7 @@ export default function BlogPostPage({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="bg-card rounded-2xl shadow-lg p-8 md:p-12"
+            className="bg-card/80 rounded-2xl shadow-lg p-8 md:p-12"
           >
             {post.excerpt && (
               <div className="mb-10 italic text-xl text-muted-foreground border-l-4 border-primary pl-4">
