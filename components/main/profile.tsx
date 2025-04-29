@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Avatar } from "@/components/ui/avatar";
 import { 
   Tooltip, 
@@ -16,14 +16,17 @@ import {
   GlobeIcon, 
   DownloadIcon 
 } from '@radix-ui/react-icons';
-import { FaGithub, FaEnvelope, FaFileDownload, FaUserAstronaut } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaFileDownload, FaUserAstronaut, FaEthereum } from 'react-icons/fa';
 import { HiExternalLink } from 'react-icons/hi';
 import GradualSpacing  from '../ui/gradual-spacing';
-import { OcticonLogoGithub16 } from '@/components/icons/skill-icons';
+import { DeviconPlainWeb3js, DeviconSolidity, OcticonLogoGithub16, SkillIconsSolidity } from '@/components/icons/skill-icons';
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
 import HandwrittenArrow from './HandWrittenArrow';
 import { DownloadCloudIcon } from 'lucide-react';
+import Image from 'next/image';
+import { Badge } from '../ui/badge';
+import EnhancedAvatar from './avatar-component';
 
 
 export default function CreativeProfile() {
@@ -82,7 +85,7 @@ export default function CreativeProfile() {
           
     
           <motion.div 
-            className="relative mt-2"
+            className="relative mt-2 text-center"
             variants={item}
           >
        
@@ -97,6 +100,38 @@ export default function CreativeProfile() {
           />
           </motion.div>
         </motion.div>
+            {/* Floating skills indicators */}
+            <AnimatePresence >
+       
+            {isLoaded && (
+              <div className='flex gap-2 flex-wrap items-center justify-center '>
+                <FloatingBadge
+                  position="-left-4 top-1/4"
+                  label="Web Dev"
+                  icon={<CodeIcon />}
+                  delay={0.5}
+                />
+                <FloatingBadge
+                  position="right-0 top-10"
+                  label="Blockchain"
+                  icon={<FaEthereum />}
+                  delay={0.8}
+                />
+                <FloatingBadge
+                  position="-right-4 bottom-1/3"
+                  label="Smart Contracts"
+                  icon={<SkillIconsSolidity className='text-primary'/>}
+                  delay={1.1}
+                />
+                <FloatingBadge
+                  position="-left-2 bottom-10"
+                  label="Web3"
+                  icon={<DeviconPlainWeb3js />}
+                  delay={1.4}
+                />
+              </div>
+            )}
+          </AnimatePresence>
         
         <motion.div 
           className="flex flex-wrap gap-3 mt-4 justify-center sm:justify-start w-full"
@@ -147,43 +182,36 @@ export default function CreativeProfile() {
         </motion.div>
       </motion.div>
 
-      {/* Avatar with Service Arrows */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, type: "spring" }}
-        className="relative flex items-center justify-center"
-      >
-        <Avatar className="w-48 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-96 border-4 border-primary/50">
-          <img 
-            src="/profile/3.jpeg" 
-            alt="Faizan Asad" 
-            className="object-cover rounded-full"
-          />
-        </Avatar>
 
-        {/* Handwritten Service Arrows */}
-        <HandwrittenArrow 
-          direction="top" 
-          title="Web Dev" 
-        />
-        <HandwrittenArrow 
-          direction="right" 
-          title="Blockchain" 
-        />
-        <HandwrittenArrow 
-          direction="bottom" 
-          title="Consulting" 
-        />
-        <HandwrittenArrow 
-          direction="left" 
-          title="Web3" 
-        />
-      </motion.div>
 
-      
+          {/* Enhanced Avatar Component */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end z-10">
+        <EnhancedAvatar />
+      </div>
 
 
     </div>
+  );
+}
+
+function FloatingBadge({ position, label, icon, delay = 0 }) {
+  return (
+    <motion.div
+      className={`flex ${position} z-20`}
+      initial={{ opacity: 0, scale: 0.8, x: 0 }}
+      animate={{ opacity: 1, scale: 1, x: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+        delay: delay
+      }}
+    >
+      <Badge className="px-3 py-1.5 flex items-center gap-1.5 backdrop-blur-md bg-white/80 dark:bg-black/80 shadow-lg border border-gray-200 dark:border-gray-800
+      rounded-xl">
+        <span className="text-orange-500">{icon}</span>
+        <span className="text-xs font-medium">{label}</span>
+      </Badge>
+    </motion.div>
   );
 }

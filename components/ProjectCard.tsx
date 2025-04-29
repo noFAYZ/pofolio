@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 import { DeviconNextjs, RiNftFill, UnjsUncrypto } from './icons/skill-icons'
+import Image from 'next/image'
 
 // Skeleton loader for project cards during initial load or filtering
 const CardSkeleton = () => (
@@ -104,9 +105,9 @@ export function ProjectCard({
         onMouseMove={handleMouseMove}
         style={{ "--spotlight-color": "255 255 255" } as React.CSSProperties}
         className={cn(
-          "group relative h-full overflow-hidden border bg-card",
+          "group relative h-full overflow-hidden border border-black/20 bg-card",
           "hover:shadow-md transition-all duration-100",
-          "flex flex-col rounded-[3rem]"
+          "flex flex-col rounded-[2.5rem]"
         )}
       >
         {/* Spotlight effect overlay */}
@@ -131,20 +132,19 @@ export function ProjectCard({
               </div>
             ) : (
               <>
-                <motion.img 
+                <Image 
                   src={imageUrl} 
                   alt={title}
+                 
+                  fill
                   className={cn(
                     "h-full w-full object-cover",
                     "transition-all duration-500 ease-out",
                     "group-hover:scale-105 group-hover:brightness-110",
-                    !isLoaded && "opacity-0"
+                    
                   )}
-                  onLoad={handleImageLoad}
-                  onError={handleImageError}
-                  initial={{ scale: 1.05, opacity: 0 }}
-                  animate={isLoaded ? { scale: 1, opacity: 1 } : { scale: 1.05, opacity: 0 }}
-                  transition={{ duration: 0.5 }}
+                  quality={75}
+               
                 />
                 
                 {/* Gradient overlay */}
@@ -226,12 +226,37 @@ export function ProjectCard({
 
 const projects = [
   {
+    title: "MoneyMappr | Financial portfolio",
+    description: "A Financial Portfolio management solution for all your Banks, Crypto and Ecommerce accounts.",
+    imageUrl: "/projects/moneymappr.png",
+    tags: ["ethers.js", "React", "Next.js", "PostgreSQL", "NFTs"],
+    projectUrl: "https://moneymappr.com",
+    githubUrl: "https://github.com/nofayz",
+    date: "2025-02-15"
+  },  {
+    title: "deFlexy Platform",
+    description: "Decentralized freelancing platform powered by secure smart contracts.",
+    imageUrl: "/projects/flex.jpg",
+    tags: ["Solidity", "React", "Next.js", "IPFS", "Web3.js","dApp"],
+    projectUrl: "https://deflexy.com",
+    githubUrl: "https://github.com/nofayz/deflexy",
+    date: "2025-01-10"
+  },  {
+    title: "Ace Miners Rewards",
+    description: "NFT-based mining rewards platform with unique staking mechanism.",
+    imageUrl: "/projects/aceminers.png",
+    tags: ["React", "Node.js", "Socket.io", "OpenAI", "MongoDB"],
+    projectUrl: "aceminers.com",
+    githubUrl: "https://github.com/yourusername/ai-chat-app",
+    date: "2022-08-30"
+  },
+  {
     title: "A.O.T.E. NFT Collection",
     description: "Manga-inspired NFT collection with unique character abilities and storylines.",
     imageUrl: "/projects/aote.png",
     tags: ["ethers.js", "React", "Next.js", "PostgreSQL", "NFTs"],
     projectUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/nofayz",
     date: "2023-08-15"
   },
   {
@@ -239,19 +264,11 @@ const projects = [
     description: "Decentralized NFT marketplace with creator-friendly features and low fees.",
     imageUrl: "/projects/mark.png",
     tags: ["Solidity", "React", "Next.js", "IPFS", "Web3.js","dApp"],
-    projectUrl: "https://data-viz-dashboard-demo.vercel.app",
-    githubUrl: "https://github.com/yourusername/data-viz-dashboard",
+    projectUrl: "http://orcafi.io/p",
+    githubUrl: "https://github.com/nofayz",
     date: "2023-04-22"
   },
-  {
-    title: "deFlexy Platform",
-    description: "Decentralized freelancing platform powered by secure smart contracts.",
-    imageUrl: "/projects/flex.jpg",
-    tags: ["Solidity", "React", "Next.js", "IPFS", "Web3.js","dApp"],
-    projectUrl: "https://data-viz-dashboard-demo.vercel.app",
-    githubUrl: "https://github.com/yourusername/data-viz-dashboard",
-    date: "2023-02-10"
-  },
+
   {
     title: "Trippy Lion NFTs",
     description: "Psychedelic artwork NFT collection with generative designs on Ethereum.",
@@ -261,15 +278,7 @@ const projects = [
     githubUrl: "https://github.com/yourusername/data-viz-dashboard",
     date: "2022-11-05"
   },
-  {
-    title: "Ace Miners Rewards",
-    description: "NFT-based mining rewards platform with unique staking mechanism.",
-    imageUrl: "/projects/aceminers.png",
-    tags: ["React", "Node.js", "Socket.io", "OpenAI", "MongoDB"],
-    projectUrl: "aceminers.com",
-    githubUrl: "https://github.com/yourusername/ai-chat-app",
-    date: "2022-08-30"
-  },
+
   {
     title: "Ant Minerz Platform",
     description: "Ecosystem for digital mining assets with recurring rewards system.",
