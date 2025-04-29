@@ -35,9 +35,9 @@ const ContactSection = () => {
   };
 
   const socialLinks = [
-    { name: 'Github', icon: <Github size={16} />, url: 'https://github.com/yourusername' },
-    { name: 'LinkedIn', icon: <Linkedin size={16} />, url: 'https://linkedin.com/in/yourusername' },
-    { name: 'Twitter', icon: <Twitter size={16} />, url: 'https://twitter.com/yourusername' },
+    { name: 'Github', icon: <Github size={16} />, url: 'https://github.com/nofayz' },
+    { name: 'LinkedIn', icon: <Linkedin size={16} />, url: 'https://linkedin.com/in/fayzan-asad' },
+    { name: 'Twitter', icon: <Twitter size={16} />, url: 'https://twitter.com/_thedarkmatter' },
   ];
 
   return (

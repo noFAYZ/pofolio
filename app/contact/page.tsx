@@ -58,7 +58,7 @@ const ContactPage = () => {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('hello@yourwebsite.com');
+    navigator.clipboard.writeText('hello@faizanasad.com');
     setCopiedToClipboard(true);
     setTimeout(() => setCopiedToClipboard(false), 2000);
   };
@@ -68,25 +68,25 @@ const ContactPage = () => {
     { 
       name: 'Github', 
       icon: <Github strokeWidth={1.5} />, 
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/nofayz',
       color: 'group-hover:text-white group-hover:bg-black'
     },
     { 
       name: 'LinkedIn', 
       icon: <Linkedin strokeWidth={1.5} />, 
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/fayzan-asad',
       color: 'group-hover:text-white group-hover:bg-[#0077b5]'
     },
     { 
       name: 'Twitter', 
       icon: <Twitter strokeWidth={1.5} />, 
-      url: 'https://twitter.com/yourusername',
+      url: 'https://twitter.com/_thedarkmatter',
       color: 'group-hover:text-white group-hover:bg-[#1DA1F2]'
     },
     { 
       name: 'Instagram', 
       icon: <Instagram strokeWidth={1.5} />, 
-      url: 'https://instagram.com/yourusername',
+      url: 'https://instagram.com/_thedarkmatter',
       color: 'group-hover:text-white group-hover:bg-[#E1306C]'
     }
   ];
@@ -238,7 +238,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-sm font-medium">Email</h3>
                     <div className="flex items-center gap-2">
-                      <p className="text-sm text-muted-foreground">hello@yourwebsite.com</p>
+                      <p className="text-sm text-muted-foreground">hello@faizanasad.com</p>
                       <button 
                         onClick={copyEmail}
                         className="opacity-0 group-hover:opacity-100 transition-opacity"
